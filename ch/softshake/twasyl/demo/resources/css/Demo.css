@@ -1,0 +1,21 @@
+.slider *.thumb {
+    -fx-background-radius: 0;
+}
+
+.redSlider *.thumb {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, darkred, red);
+}
+
+.greenSlider *.thumb {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, darkgreen, green);
+}
+
+.blueSlider *.thumb {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, darkblue, blue);
+}
+
+.button {
+    -fx-background-radius: 0;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, darkgray, gray);
+    -fx-border-color: lightgray;
+}

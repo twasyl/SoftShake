@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ch.softshake.twasyl.demo.controllers.DemoController">
+    <stylesheets>
+        <URL value="@/ch/softshake/twasyl/demo/resources/css/Demo.css" />
+    </stylesheets>
+
+    <top>
+        <ImageView>
+            <image>
+                <Image url="@/ch/softshake/twasyl/demo/resources/images/logo.png" />
+            </image>
+        </ImageView>
+    </top>
+
+    <center>
+           <VBox>
+               <children>
+                   <HBox>
+                       <children>
+                           <Label text="File: " />
+                           <TextField fx:id="fileLocationTF" />
+                           <Button text="..." onAction="#browseImage" />
+                           <Button text="Load" onAction="#loadImage" />
+                       </children>
+                   </HBox>
+
+                   <ImageView fx:id="userImage" fitWidth="400" fitHeight="400"/>
+               </children>
+           </VBox>
+    </center>
+
+    <right>
+        <GridPane alignment="TOP_LEFT" hgap="10" vgap="10">
+            <children>
+                <Label text="Red: " GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <Label text="Green: " GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <Label text="Blue: " GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <Slider min="0" max="1" fx:id="redSlider" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="redSlider" />
+                <Slider min="0" max="1" fx:id="greenSlider" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="greenSlider" />
+                <Slider min="0" max="1" fx:id="blueSlider" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="blueSlider" /> 
+                <Button text="Reset" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" onAction="#reset" /> 
+            </children>
+        </GridPane>
+    </right>
+</BorderPane>
+
